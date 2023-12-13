@@ -7,6 +7,7 @@ import { GoSearch } from 'react-icons/go';
 import { Helmet } from "react-helmet-async";
 // import AllJobPageCard3 from "../Components/AllPageComponents/AllJobPageCard3";
 import "./CSS/pagination.css"
+import AllJobPageCard from "../Components/AllPageComponents/AllJobPageCard";
 const All_jobs = () => {
     const axios = useAxios();
     const [allJobs, setAllJobs] = useState([]);
@@ -105,18 +106,20 @@ const All_jobs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mx-5 space-y-1">
-                        {filteredJobs.map(job => (
-                            <AllJobPageCard2 key={job._id} job={job} ></AllJobPageCard2>
-                        ))}
+                    <div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-5 gap-6">
+                            {filteredJobs.map(job => (
+                                <AllJobPageCard key={job._id} job={job} ></AllJobPageCard>
+                            ))}
+                        </div>
                     </div>
                 </div>
             )}
             <div className="pagination space-x-2">
-               
+
                 <button className="btn" onClick={handlePrevPage}>Prev</button>
                 {
-                    pages.map((page, idx) => <button 
+                    pages.map((page, idx) => <button
                         className={currentPage === page ? " btn btn-primary  " : "btn "}
                         // className={currentPage ? page && "selected"  }
                         onClick={() => setCurrentPage(page)}
