@@ -1,7 +1,6 @@
 
 import { useEffect, useState } from "react";
 import useAxios from "../Hooks/useAxios";
-import AllJobPageCard2 from "../Components/AllPageComponents/AllJobPageCard2";
 import LoadingSk from "../Components/loading/LoadingSk";
 import { GoSearch } from 'react-icons/go';
 import { Helmet } from "react-helmet-async";
