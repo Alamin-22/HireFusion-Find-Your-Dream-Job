@@ -5,7 +5,7 @@ import useAuth from "./useAuth";
 
 
 const axiosSecure = axios.create({
-    baseURL: "https://assignment-11-server-mauve-one.vercel.app/api/v1",
+    baseURL: "https://jobboard-cookie-test.vercel.app/api/v1",
     withCredentials: true
 })
 const useAxios = () => {
